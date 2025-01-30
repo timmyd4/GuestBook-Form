@@ -1,0 +1,94 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    margin: 0; 
+    background-color: lightgrey;          
+}
+
+h2
+{
+    font-family: sans-serif;
+}
+
+p
+{
+    font-family: sans-serif;
+    font-size: small;
+    
+}
+
+
+.Contact
+{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.space-even
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.heading
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.style-fn
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.input-styles
+{
+    padding: 5px;  
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.style-p
+{
+    margin: 10px;
+}
+
+.dropdown-input
+{
+    width: 275px;
+    height: 30px;  
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin: 10px;
+    margin-top: -15px;
+}
+
+.Meet-section
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.meet-specify
+{
+    padding: 5px;  
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: -10px;
+    width: 275px;
+}
+
+.other-p
+{
+    margin: 10px;
+}
