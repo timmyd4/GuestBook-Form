@@ -1,3 +1,12 @@
+<!--
+Author: Tim Williams
+Date: 1-30-2025
+Class: SDEV305
+Project: Guestbook Form
+File: HTML
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link href="/Styles/index.css" rel="stylesheet">
+    <link rel="icon" href="/Images/Contact.png">
 </head>
 <body>
 
@@ -75,9 +85,10 @@
             <p class="style-p"> How did we meet? </p>
             <select id="options" class="dropdown-input">
                 <option value="" disabled selected>Please Select</option>
-                <option value="option1"> option 1</option>
-                <option value="option2"> option 2</option>
-                <option value="option3"> option 3</option>
+                <option value="option1"> School Together </option>
+                <option value="option2"> Worked Together </option>
+                <option value="option3"> Public Event Together </option>
+                <option value="option4"> Friend of a Friend </option>
             </select>
         </div>
         <!-- End of How did we meet Section -->
@@ -94,10 +105,38 @@
 
     <div>
 
+        <!-- Large Message Box Section  -->
         <div>
             <p class="style-p"> Message </p>
-            <input type="text">
+            <input type="text" class="Large-text-Box">
         </div>
+        <!-- End of Large Message Box Section -->
+
+
+        <!-- Mailling Check Box Section -->
+        <div class="mailing-list">
+            <input type="checkbox" class="mailing-list-checkbox">
+            <p> Please add me to your mailing list </p>
+        </div>
+        <!-- End of Mailling Check Box Section -->
+
+
+        <!-- Email Format Section -->
+        <div>
+            <p class="other-p2"> Choose an email format: </p>
+            <div class="radio-button-section">
+                <input type="radio" value="HTML" class="radio-button" name="typeofmail"> <p class="radio-button-text"> HTML </p>
+                <input type="radio" value="Text" class="radio-button" name="typeofmail"> <p class="radio-button-text"> Text </p>
+            </div>
+        </div>
+        <!-- Email Format Section -->
+         
+
+        <!-- Submit Button Section -->
+        <div>
+            <button class="button-style"> Submit </button>
+        </div>
+         <!-- End of Submit Button Section -->
 
     </div>
 

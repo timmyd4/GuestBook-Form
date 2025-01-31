@@ -1,3 +1,16 @@
+/*
+Author: Tim Williams
+Date: 1-30-2025
+Class: SDEV305
+Project: Guestbook Form
+File: CSS
+*/
+
+
+/* 
+    Main Element Styles for aligning
+*/
+
 body
 {
     display: flex;
@@ -10,6 +23,7 @@ body
 h2
 {
     font-family: sans-serif;
+    color: black;
 }
 
 p
@@ -19,6 +33,15 @@ p
     
 }
 
+
+/* 
+     End of Main Element Styles for aligning
+*/
+
+
+/* 
+    Styles for maintaining body fixture, or alignment.
+*/
 
 .Contact
 {
@@ -37,10 +60,28 @@ p
     flex-direction: row;
 }
 
+.Meet-section
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 
+    End of Styles for maintaining body fixture, or alignment.
+*/
+
+
+/* 
+    Styles Needed for editing look of elements
+*/
+
+
 .heading
 {
     text-align: center;
     margin: 0;
+    margin-bottom: -10px;
     padding: 0;
 }
 
@@ -73,11 +114,6 @@ p
     margin-top: -15px;
 }
 
-.Meet-section
-{
-    display: flex;
-    flex-direction: row;
-}
 
 .meet-specify
 {
@@ -92,3 +128,64 @@ p
 {
     margin: 10px;
 }
+
+.other-p2
+{
+    display: inline;
+    margin: 10px;
+}
+
+.Large-text-Box
+{
+    width: 570px;
+    height: 75px;
+    margin: 10px;
+    border: 1px solid #ccc; 
+}
+
+.mailing-list
+{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.mailing-list-checkbox
+{
+    margin: 5px;
+}
+
+.radio-button-section
+{
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: flex-end;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.radio-button
+{
+    margin-top: -15px;
+}
+
+.radio-button-text
+{
+    margin-top: -2px;
+}
+
+.button-style
+{
+    background-color: green;
+    color: white;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    width: 75px;
+    height: 30px;
+    margin: 10px;
+    margin-top: -5px;
+}
+
+/* 
+    End of Styles Needed for editing look of elements
+*/
