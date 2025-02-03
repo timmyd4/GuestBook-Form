@@ -19,6 +19,7 @@ File: HTML
 <body>
 
 <div class="Contact">
+    <form action="submitted" method="post">
 
 
     <!-- Contact Form Heading -->
@@ -32,7 +33,7 @@ File: HTML
     <div class="space-even"> 
             <div class="style-fn">
                 <p> First Name </p>
-                <input class="input-styles" type="text">
+                <input class="input-styles" type="text" name="fname">
             </div>
     <!-- End First Name Section -->
 
@@ -40,7 +41,7 @@ File: HTML
     <!-- Last Name Section -->
             <div class="style-fn">
                 <p> Last Name </p>
-                <input class="input-styles" type="text">
+                <input class="input-styles" type="text" name="lname">
             </div>
     <!-- End Last Name Section -->
 
@@ -48,7 +49,7 @@ File: HTML
     <!-- Job Title Section -->
             <div class="style-fn">
                 <p> Job Title </p>
-                <input class="input-styles" type="text">
+                <input class="input-styles" type="text" name="status">
             </div>
     </div>
     <!-- End Job Title Section -->
@@ -58,7 +59,7 @@ File: HTML
     <div class="space-even"> 
         <div class="style-fn">
             <p> Company </p>
-            <input class="input-styles" type="text">
+            <input class="input-styles" type="text" name="company">
         </div>
     <!-- End Company Name Section -->
 
@@ -66,7 +67,7 @@ File: HTML
     <!-- LinkedIn Section -->
         <div class="style-fn">
             <p> LinkedIn URL </p>
-            <input class="input-styles" type="text">
+            <input class="input-styles" type="text" name="linkedIn">
         </div>
     <!-- End LinkedIn Section -->
 
@@ -74,7 +75,7 @@ File: HTML
     <!-- Email Address Section -->
         <div class="style-fn">
             <p> Email Address </p>
-            <input class="input-styles" type="text">
+            <input class="input-styles" type="text" name="email">
         </div>
     </div>
     <!-- End Email Address Section -->
@@ -83,12 +84,12 @@ File: HTML
     <!-- How did we meet Section -->
         <div>
             <p class="style-p"> How did we meet? </p>
-            <select id="options" class="dropdown-input">
+            <select id="options" class="dropdown-input" name="Introduced">
                 <option value="" disabled selected>Please Select</option>
-                <option value="option1"> School Together </option>
-                <option value="option2"> Worked Together </option>
-                <option value="option3"> Public Event Together </option>
-                <option value="option4"> Friend of a Friend </option>
+                <option value="School-Together"> School Together </option>
+                <option value="Worked-Together"> Worked Together </option>
+                <option value="Public-Event"> Public Event Together </option>
+                <option value="Friend-of-Friend"> Friend of a Friend </option>
             </select>
         </div>
         <!-- End of How did we meet Section -->
@@ -97,7 +98,7 @@ File: HTML
         <!-- Other Please Specify Section -->
         <div>
             <p class="other-p">Other(please specify) </p>
-            <input type="text" class="meet-specify">
+            <input type="text" class="meet-specify" name="other" name="other">
         </div>
         <!-- End of Other Please Specify Section -->
 
@@ -108,7 +109,7 @@ File: HTML
         <!-- Large Message Box Section  -->
         <div>
             <p class="style-p"> Message </p>
-            <input type="text" class="Large-text-Box">
+            <input type="text" class="Large-text-Box" name="large-message">
         </div>
         <!-- End of Large Message Box Section -->
 
@@ -133,9 +134,10 @@ File: HTML
          
 
         <!-- Submit Button Section -->
-        <div>
-            <button class="button-style"> Submit </button>
-        </div>
+            <div>
+                <button class="button-style" href="#" role="button"> Submit </button>
+            </div>
+        </form>
          <!-- End of Submit Button Section -->
 
     </div>
