@@ -1,4 +1,29 @@
 import express from 'express';
+import mariadb from 'mariadb';
+import validateForm from './services/validation.js';
+
+const pool = mariadb.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '1234',
+    database: 'guestbook',
+    port: '3306'
+});
+
+
+async function connect()
+{
+    try 
+    {
+        const conn = await pool.getConnection();
+        console.log('Connected to the database');
+        return conn;
+    }
+    catch(err)
+    {
+        console.log(`Error connecting to database ${err}`);
+    }
+}
 
 const app = express();
 
@@ -17,19 +42,45 @@ app.get('/', (req, res) => {
 })
 
 //Send to Submitted page and populate array with values filled in.
-app.post("/submitted", (req, res) =>{
+app.post("/submitted", async (req, res) =>{
 
-    if(req.body.fname == "" || req.body.lname == "" || req.body.email == "")
+    // if(req.body.fname == "" || req.body.lname == "" || req.body.email == "")
+    // {
+    //     res.send(
+    //         `
+    //         <h1> Invalid, please enter vaild entries </h1> 
+    //         <br>
+    //         <a href="/" class="button-style"> Back to Home </a>
+    //         `
+    //     )
+    //     return;
+    // }
+
+    const order = {
+        fname: req.body.fname,
+        lname: req.body.lname,
+        status: req.body.status,
+        company: req.body.company,
+        SocialMedia: req.body.LinkedIn,
+        email: req.body.email,
+        HowMet: req.body.Introduced
+    }
+
+    const result = validateForm(order);
+    if(!result.isValid)
     {
-        res.send(
-            `
-            <h1> Invalid, please enter vaild entries </h1> 
-            <br>
-            <a href="/" class="button-style"> Back to Home </a>
-            `
-        )
+        console.log(result.errors);
+        res.send(result.errors);
         return;
     }
+
+    const conn = await connect();
+
+    const insertQuery = await conn.query(`INSERT INTO contacts 
+        (fname, lname, status, company, linkedin, email, introduced) 
+        VALUES (?, ?, ?, ?, ?, ?, ?)` ,
+        [order.fname, order.lname, order.status, order.company, 
+        order.linkedin, order.email, order.introduced]);
 
     values.push(req.body)
     res.send(
@@ -38,6 +89,8 @@ app.post("/submitted", (req, res) =>{
             <button class="button-style" href="#" role="button"> Back to home Page </button>
         </form>`
       );
+
+      
 
     
 })
